@@ -1,0 +1,30 @@
+{
+  "name": "express-and-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Daniel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "dependencies": {
+    "bcrypt": "2.3.0",
+    "body-parser": "*",
+    "cors": "*",
+    "emailjs": "^1.0.12",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "lodash.isplainobject": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "engines": {
+    "node":"8.9.4",
+    "npm":"5.6.0"
+  }
+}
