@@ -8,7 +8,7 @@ const path = require('path');
 // Set port on 3000
 //const port = process.env.PORT || 3000;
 // Heroku
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 // Database
 const config = require('./config/database');
 // Routes
