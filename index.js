@@ -6,9 +6,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 // Set port on 3000
-//const port = process.env.PORT || 3000;
-// Heroku
 const port = process.env.PORT || 3000;
+// Heroku
+//const port = process.env.PORT || 8080;
 // Database
 const config = require('./config/database');
 // Routes

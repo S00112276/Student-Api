@@ -12,21 +12,15 @@
     "nodemon": "^1.12.1"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3",
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "2.3.0",
     "body-parser": "*",
-    "cors": "^2.8.4",
+    "cors": "*",
     "emailjs": "^1.0.12",
     "express": "*",
-    "jsonwebtoken": "^8.1.1",
+    "jsonwebtoken": "*",
     "lodash.isplainobject": "*",
-    "mailgun-js": "^0.16.0",
     "mongoose": "*",
-    "passport": "^0.4.0",
-    "passport-jwt": "^3.0.1"
-  },
-  "engines": {
-    "node": "8.9.4",
-    "npm": "5.6.0"
+    "passport": "*",
+    "passport-jwt": "*"
   }
 }

@@ -21,7 +21,7 @@ const StudentSchema = mongoose.Schema({
     },
     username: {
         type: String,
-        required: true,
+        sparse: true,
         unique: true
     },
     studentId: {
@@ -31,20 +31,16 @@ const StudentSchema = mongoose.Schema({
     },
     password: {
         type: String,
+        sparse: true,
         required: true
+    },
+    groupId: {
+        type: mongoose.Schema.Types.ObjectId, // Gets ID for referenced Document
+        ref: 'Course' // References Document
     }
 });
 
 const Student = module.exports = mongoose.model('Student', StudentSchema);
-
-// module.exports.getUserById = function(id, callback) {
-//     Student.findById(id, callback);
-// }
-
-/* module.exports.getUserById = function(id, callback) {
-    const query = { id : id }
-    Student.findOne(query, callback);
-} */
 
 module.exports.getUserByEmail = function(email, callback) {
     const query = { email : email }
