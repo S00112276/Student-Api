@@ -59,7 +59,7 @@ router.put('/updateentry', (req, res) => {
 });
 
 // Delete an Entry
-router.delete('/removefromdiary', (req, res) => {
+router.delete('/removefromdiary/:diaryId', (req, res) => {
     DiaryEntry.findOneAndRemove({ _id: req.params.diaryId }, function (err) {
         if (err)
             res.send(err);
