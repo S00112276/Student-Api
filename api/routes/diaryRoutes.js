@@ -49,7 +49,16 @@ router.get('/diaryentry', (req, res) => {
 
 // Update or add an Entry
 router.put('/updateentry/:entry', (req, res) => {
-    DiaryEntry.findOneAndUpdate({ _id: req.params.entry._id }, req.body,
+    DiaryEntry.findOneAndUpdate({ _id: req.params.entry._id }, {$set: {
+        title: req.body.title,
+        startDate: req.body.startDate,
+        dueDate: req.body.dueDate,
+        lecturer: req.body.lecturer,
+        groups: req.body.groups,
+        room: req.body.room,
+        module: req.body.module,
+        percentage: req.body.percentage,
+        description: req.body.description}},
         { upsert: true }, function (err, entry) {
             if (err) {
                 res.json({ success: false, msg: 'Failed to add entry: ' + err });
