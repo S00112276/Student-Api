@@ -72,7 +72,7 @@ router.get('/studentmodules/:groupId', (req, res, next) => {
     });
 });
 
-// Find Module based on lecturerId
+// Find Modules based on lecturerId
 router.get('/lecturermodules/:lecturerId', (req, res, next) => {
     Module.find({ lecturer : req.params.lecturerId }, function (err, entry) {
         if(err)
