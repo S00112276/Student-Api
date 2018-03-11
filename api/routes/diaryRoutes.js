@@ -47,14 +47,15 @@ router.get('/diaryentry', (req, res) => {
     });
 });
 
-// Update an Entry
-router.put('/updateentry', (req, res) => {
-    DiaryEntry.findOneAndUpdate({ _id: req.params.diaryId }, req.body,
-        { new: true }, function (err, entry) {
-            if (err)
-                res.send(err);
-
-            res.json(entry);
+// Update or add an Entry
+router.put('/updateentry/:entry', (req, res) => {
+    DiaryEntry.findOneAndUpdate({ _id: req.params.entry._id }, req.body,
+        { upsert: true }, function (err, entry) {
+            if (err) {
+                res.json({ success: false, msg: 'Failed to add entry: ' + err });
+            } else {
+                res.json({ success: true, msg: 'Entry added to diary!' });
+            }
         })
 });
 
