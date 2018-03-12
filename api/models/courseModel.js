@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Student Group Schema
-const StudentGroup = mongoose.Schema({  
+const StudentGroup = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -19,3 +19,4 @@ const CourseSchema = mongoose.Schema({
 });
 
 const Course = module.exports = mongoose.model('Course', CourseSchema);
+const StudentGroup = module.exports = mongoose.model('StudentGroup', StudentGroup);
