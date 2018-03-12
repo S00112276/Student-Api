@@ -15,7 +15,7 @@ const CourseSchema = mongoose.Schema({
         required: true,
         unique: true
     },
-    groups: [StudentGroup] // Embedded Documents
+    groups: [StudentGroup] // Embedded Document
 });
 
 const Course = module.exports = mongoose.model('Course', CourseSchema);
